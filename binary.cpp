@@ -2,13 +2,12 @@
 #include <iostream>
 using namespace std;
 
-// Function to search x in the given array
+// Function to search x in the given no. of lista or arrays 
 void sentinelSearch(int arr[], int n, int key)
 {
 
 	
 	int last = arr[n - 1];
-
 	// Element to be searched is
 	// placed at the last index
 	arr[n - 1] = key;
@@ -17,7 +16,7 @@ void sentinelSearch(int arr[], int n, int key)
 	while (arr[i] != key)
 		i++;
 
-	// Put the last element back
+	// Put the last element back in the earlier place
 	arr[n - 1] = last;
 
 	if ((i < n - 1) || (arr[n - 1] == key))
